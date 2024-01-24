@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Provider>
         <div className='main'>
           <div className='gradient'/>
         </div>
@@ -21,7 +22,9 @@ export default function RootLayout({ children }) {
         <NavBar />
         {children}
         </main>
+        </Provider>
       </body>
+      
     </html>
   )
 }
