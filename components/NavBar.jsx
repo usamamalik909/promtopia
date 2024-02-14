@@ -28,7 +28,7 @@ const NavBar = () => {
           className="object-contain"
         />
       </Link>
-      {/*  Mobile Navigation */}
+      {/*  Desktop Navigation */}
       <div className="sm:flex hidden">
         {session?.user ?(
           <div className="flex gap-3 md:gap-5">
@@ -41,7 +41,7 @@ const NavBar = () => {
             </button>
 
             <Link href="/profile">
-              <Image src="/assets/images/logo.svg" width={37} height={37} />
+              <Image src={session?.user.image} width={37} height={37} />
             </Link>
           </div>
         ) : (
@@ -65,7 +65,7 @@ const NavBar = () => {
         {session?.user ? (
           <div className="flex">
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image}
               alt="Promptopia Logo"
               width={30}
               height={30}
